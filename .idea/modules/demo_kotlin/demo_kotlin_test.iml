@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module external.linked.project.id=":demo_kotlin:test" external.linked.project.path="$MODULE_DIR$/../../../demo_kotlin" external.root.project.path="$MODULE_DIR$/../../.." external.system.id="GRADLE" external.system.module.group="kotlin-nodejs-experiment" external.system.module.type="sourceSet" external.system.module.version="unspecified" type="JAVA_MODULE" version="4">
+  <component name="NewModuleRootManager" LANGUAGE_LEVEL="JDK_1_8" inherit-compiler-output="false">
+    <output-test url="file://$USER_HOME$/build/kotlin-nodejs-experiment/demo_kotlin/classes/test" />
+    <exclude-output />
+    <content url="file://$MODULE_DIR$/../../../demo_kotlin/src/test">
+      <sourceFolder url="file://$MODULE_DIR$/../../../demo_kotlin/src/test/java" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/../../../demo_kotlin/src/test/kotlin" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/../../../demo_kotlin/src/test/resources" type="java-test-resource" />
+    </content>
+    <orderEntry type="inheritedJdk" />
+    <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntry type="module" module-name="demo_kotlin_main" />
+    <orderEntry type="library" name="Gradle: org.jetbrains.kotlin:kotlin-js-library:1.0.0" level="project" />
+  </component>
+  <component name="TestModuleProperties" production-module="demo_kotlin_main" />
+</module>

@@ -1,0 +1,55 @@
+apply plugin: 'kotlin2js'
+
+//Kotlin transpiled files will be copied to this directory
+def output_dir = "${projectDir}/../express_js/compiled"
+
+//some Kotlin's transpilation settings
+compileKotlin2Js {
+    kotlinOptions.metaInfo = true
+    kotlinOptions.sourceMap = true
+    kotlinOptions.outputFile = "$output_dir/demo_kotlin.js"
+    kotlinOptions.suppressWarnings = true
+    kotlinOptions.verbose = true
+}
+
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    compile "org.jetbrains.kotlin:kotlin-js-library:$kotlin_version"
+}
+
+jar.dependsOn(compileKotlin2Js)
+
+task copyJsFilesFromDependencies(dependsOn: build) {
+    try {
+        //copy all necessary .js files
+        configurations.compile.each { File file ->
+            copy {
+                includeEmptyDirs = true
+                println("cmp: ${file.absolutePath}")
+                from zipTree(file.absolutePath)
+                into "$output_dir/lib"
+                include { fileTreeElement ->
+                    def path = fileTreeElement.path
+                    def include=path.endsWith(".js") && (path.startsWith("META-INF/resources/") || !path.startsWith("META-INF/"))
+                    if (include) println("unziping $path")
+                    return include
+                }
+            }
+        }
+    } catch (Exception e) {
+        System.err.println(e.getMessage())
+    }
+}
+
+clean.doFirst() {
+    delete "$output_dir"
+}
+
+
+sourceSets {
+    main.java.srcDirs += 'src/main/kotlin'
+}
