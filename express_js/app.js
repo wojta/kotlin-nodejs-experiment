@@ -1,6 +1,6 @@
 // var sleep = require('sleep');
 // sleep.sleep(5);
-console.log("Server started.");
+console.log("Server started");
 var express = require('express');
 var path = require('path');
 var favicon = require('serve-favicon');

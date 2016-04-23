@@ -2,13 +2,10 @@
  * Created by wojta on 15.4.16.
  */
 var fs = require('fs');
-var PATH_TO_KOTLIN_JS_DIR = "../compiled";
 //kotlin.js has module support by default
-var Kotlin = require(PATH_TO_KOTLIN_JS_DIR + "/lib/kotlin");
-
-//Kotlin compiled script needs to be evaled, I don't know any better solution. 
-var demoScript = fs.readFileSync(PATH_TO_KOTLIN_JS_DIR + "/demo_kotlin.js", {encoding: "UTF-8"});
-eval(demoScript);
+//it must be global so we can use it other modules
+global.Kotlin = require("../compiled/lib/kotlin");
+require("../compiled/demo_kotlin");
 
 function test() {
     //instantiating Kotlin class
@@ -18,3 +15,5 @@ function test() {
 }
 
 module.exports = {"test": test};
+
+//@ sourceURL=../compiled/demo_kotlin.js

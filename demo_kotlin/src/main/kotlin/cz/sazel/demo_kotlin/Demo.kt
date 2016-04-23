@@ -10,6 +10,8 @@ class Demo {
      * Returns list of files in the curent directory.
      */
     fun test(): dynamic {
-        return fs.readdirSync(".");
+        var test="abcd"
+        var pokus="xyz_$test"
+        return fs.readdirSync(".")
     }
 }
