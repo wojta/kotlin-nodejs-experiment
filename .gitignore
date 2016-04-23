@@ -1,4 +1,6 @@
 #this app specific
+/demo_kotlin/build
+/express_js/build
 compiled
 # Created by .ignore support plugin (hsz.mobi)
 ### Node template

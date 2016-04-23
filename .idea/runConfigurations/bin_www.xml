@@ -1,5 +1,5 @@
 <component name="ProjectRunConfigurationManager">
-  <configuration default="false" name="bin/www" type="NodeJSConfigurationType" factoryName="Node.js" path-to-node="project" path-to-js-file="bin/www" working-dir="$PROJECT_DIR$/express_js">
+  <configuration default="false" name="bin/www" type="NodeJSConfigurationType" factoryName="Node.js" path-to-node="$PROJECT_DIR$/express_js/build/nodejs/node-v5.11.0-linux-x64/bin/node" path-to-js-file="bin/www" working-dir="$PROJECT_DIR$/express_js">
     <envs>
       <env name="DEBUG" value="kotlin-nodejs-experiment:*" />
     </envs>

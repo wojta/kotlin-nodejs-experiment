@@ -4,6 +4,7 @@
     <exclude-output />
     <content url="file://$MODULE_DIR$/../../../demo_kotlin">
       <excludeFolder url="file://$MODULE_DIR$/../../../demo_kotlin/.gradle" />
+      <excludeFolder url="file://$MODULE_DIR$/../../../demo_kotlin/build" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />

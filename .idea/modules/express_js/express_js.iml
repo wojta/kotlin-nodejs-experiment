@@ -3,12 +3,14 @@
   <component name="NewModuleRootManager" inherit-compiler-output="true">
     <exclude-output />
     <content url="file://$MODULE_DIR$/../../../express_js">
-      <sourceFolder url="file://$MODULE_DIR$/../../../express_js/compiled" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/../../../express_js/modules" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/../../../express_js/node_modules" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/../../../express_js/routes" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/../../../express_js/compiled" isTestSource="false" generated="true" />
       <excludeFolder url="file://$MODULE_DIR$/../../../express_js/.gradle" />
+      <excludeFolder url="file://$MODULE_DIR$/../../../express_js/build" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
-    <orderEntry type="library" name="express_js node_modules" level="project" />
   </component>
 </module>

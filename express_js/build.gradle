@@ -2,9 +2,11 @@ apply plugin: 'com.moowork.node'
 apply plugin: 'kotlin2js'
 
 task startServer(type: NodeTask) {
-    script = file('bin/www')
+    script = file('app.js')
 }
 
 dependencies {
     compile project(":demo_kotlin")
 }
+
+npm_install.dependsOn(npm_cache_clean)
