@@ -12,6 +12,8 @@ class Demo {
     fun test(): dynamic {
         var test="abcd"
         var pokus="xyz_$test"
+        var cirkus=arrayOf(test,pokus);
+        var vysledek=cirkus.filter { it -> it.startsWith("ab") };
         return fs.readdirSync(".")
     }
 }
