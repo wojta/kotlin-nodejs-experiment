@@ -9,16 +9,16 @@ compileKotlin2Js {
     kotlinOptions.sourceMap = true
     kotlinOptions.outputFile = "$output_dir/demo_kotlin.js"
     kotlinOptions.suppressWarnings = true
-    kotlinOptions.verbose = true
+    kotlinOptions.moduleKind = "commonjs" //this is important to properly allow require() import
+    //kotlinOptions.verbose = true
 }
-
 
 repositories {
     mavenCentral()
 }
 
 dependencies {
-    compile "org.jetbrains.kotlin:kotlin-js-library:$kotlin_version"
+    compile "org.jetbrains.kotlin:kotlin-stdlib-js:$kotlin_version"
 }
 
 jar.dependsOn(compileKotlin2Js)
@@ -48,7 +48,6 @@ task copyJsFilesFromDependencies(dependsOn: build) {
 clean.doFirst() {
     delete "$output_dir"
 }
-
 
 sourceSets {
     main.java.srcDirs += 'src/main/kotlin'

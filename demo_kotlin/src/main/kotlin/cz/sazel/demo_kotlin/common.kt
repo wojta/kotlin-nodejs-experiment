@@ -7,5 +7,5 @@ package cz.sazel.demo_kotlin
 /**
  * Require for adding modules from Node.
  */
-@native
+external
 fun require(module:String):dynamic;

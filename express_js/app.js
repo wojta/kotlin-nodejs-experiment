@@ -3,7 +3,6 @@
 console.log("Server started");
 //kotlin.js has module support by default
 //it must be global so we can use it other modules
-global.Kotlin = require("./compiled/lib/kotlin");
 var express = require('express');
 var path = require('path');
 var favicon = require('serve-favicon');
