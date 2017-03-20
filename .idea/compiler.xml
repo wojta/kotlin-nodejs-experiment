@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="CompilerConfiguration">
-    <resourceExtensions />
     <wildcardResourcePatterns>
       <entry name="!?*.java" />
       <entry name="!?*.form" />
@@ -12,16 +11,13 @@
       <entry name="!?*.kt" />
       <entry name="!?*.clj" />
     </wildcardResourcePatterns>
-    <annotationProcessing>
-      <profile default="true" name="Default" enabled="false">
-        <processorPath useClasspath="true" />
-      </profile>
-    </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="demo_kotlin_main" target="1.8" />
       <module name="demo_kotlin_test" target="1.8" />
       <module name="express_js_main" target="1.8" />
       <module name="express_js_test" target="1.8" />
+      <module name="kotlin-nodejs-experiment_main" target="1.8" />
+      <module name="kotlin-nodejs-experiment_test" target="1.8" />
     </bytecodeTargetLevel>
   </component>
 </project>
